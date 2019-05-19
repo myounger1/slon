@@ -1,0 +1,4 @@
+login user2
+password 1
+ava E:\WindowsFormsApplication1\WindowsFormsApplication1\Pictures\test.bmp
+0
