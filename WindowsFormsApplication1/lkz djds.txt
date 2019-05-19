@@ -1,0 +1,28 @@
+ var dir = new DirectoryInfo(Application.StartupPath); // папка с exe 
+
+                foreach (FileInfo file in dir.GetFiles())
+                {
+                    //здесь Вадим                   а тут C:\Users\Documents\...Вадим.txt
+                    String fileName = Path.GetFileNameWithoutExtension(file.FullName);
+                    if (textBox1.Text == fileName)
+                    {
+                        //MessageBox.Show("Есть такой пользователь");
+
+                        StreamReader sr = new StreamReader(file.FullName, System.Text.Encoding.UTF8);
+
+                        string login = sr.ReadLine();
+                        string password = sr.ReadLine();
+                        string ava = sr.ReadLine();
+
+                        Vars.avaway = ava.Replace("ava ", "");
+
+                        sr.Close();
+
+                        if (password == "password " + textBox2.Text)
+                        {                            
+                            TorgPlatForm tf = new TorgPlatForm("../../Pictures//fonOfMagaz.bmp", textBox1.Text);
+
+                            tf.ShowDialog();
+                        }
+                    }
+                }    

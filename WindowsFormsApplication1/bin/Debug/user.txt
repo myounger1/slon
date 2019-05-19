@@ -1,0 +1,4 @@
+﻿login user
+password 1
+ava ..\..\Pictures\Пивко.jpg
+0
